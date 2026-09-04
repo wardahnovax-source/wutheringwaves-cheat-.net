@@ -58,13 +58,26 @@ function FeatureIcon({ icon }: { icon: string }) {
 function HomeAboutInner() {
 	const { t } = useTranslation();
 
+	const highlights = ['highlightEsp', 'highlightAimbot', 'highlightTeleport', 'highlightUndetected'] as const;
+
 	return (
 		<section className="home-about shell" aria-labelledby="home-about-title">
-			<header className="home-about__head">
-				<p className="home-about__eyebrow">{t('home.aboutEyebrow')}</p>
-				<h2 id="home-about-title">{t('home.aboutTitle')}</h2>
-				<p className="home-about__lede">{t('home.aboutP1')}</p>
-			</header>
+			<div className="home-about__intro">
+				<div className="home-about__intro-accent" aria-hidden="true" />
+				<header className="home-about__head">
+					<p className="home-about__eyebrow">{t('home.aboutEyebrow')}</p>
+					<h2 id="home-about-title">
+						<em>{t('home.aboutTitleAccent')}</em> {t('home.aboutTitleRest')}
+					</h2>
+					<p className="home-about__subtitle">{t('home.aboutSubtitle')}</p>
+					<p className="home-about__lede">{t('home.aboutP1')}</p>
+				</header>
+				<ul className="home-about__highlights" aria-label={t('home.aboutHighlightsLabel')}>
+					{highlights.map((key) => (
+						<li key={key}>{t(`home.${key}`)}</li>
+					))}
+				</ul>
+			</div>
 
 			<div className="home-about__grid">
 				{featureGroups.map((group) => (
