@@ -73,6 +73,11 @@ const links = [
 		overflow: hidden;
 	}
 
+	.site-header .lang-switcher,
+	.site-panel .lang-switcher {
+		position: relative;
+	}
+
 	.site-header .lang-switcher__toggle {
 		display: inline-flex;
 		align-items: center;
@@ -111,12 +116,14 @@ const links = [
 	}
 
 	.site-header .lang-switcher__panel {
+		position: absolute;
 		right: 0;
 		left: auto;
 		top: calc(100% + 0.45rem);
 		min-width: 15rem;
 		max-height: min(70vh, 22rem);
 		overflow: auto;
+		padding: 0.5rem;
 		background: var(--bg-elevated);
 		border: 1px solid var(--line);
 		border-radius: var(--radius-md);
@@ -124,13 +131,55 @@ const links = [
 		z-index: 120;
 	}
 
-	.site-header .lang-switcher__link {
+	.site-header .lang-switcher__note,
+	.site-panel .lang-switcher__note {
+		margin: 0 0 0.5rem;
+		padding: 0.45rem 0.55rem;
+		border-radius: var(--radius-sm);
+		background: color-mix(in srgb, var(--bg-hover) 80%, transparent);
+		color: var(--ink-muted);
+		font-size: 0.72rem;
+		line-height: 1.4;
+	}
+
+	.site-header .lang-switcher__list,
+	.site-panel .lang-switcher__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.25rem;
+	}
+
+	.site-header .lang-switcher__link,
+	.site-panel .lang-switcher__link {
+		display: grid;
+		gap: 0.1rem;
+		padding: 0.55rem 0.65rem;
+		border-radius: var(--radius-sm);
 		color: var(--ink);
+		transition: background 0.15s ease;
 	}
 
 	.site-header .lang-switcher__link:hover,
-	.site-header .lang-switcher__link.is-current {
+	.site-header .lang-switcher__link.is-current,
+	.site-panel .lang-switcher__link:hover,
+	.site-panel .lang-switcher__link.is-current {
 		background: color-mix(in srgb, var(--magenta) 12%, transparent);
+	}
+
+	.site-header .lang-switcher__native,
+	.site-panel .lang-switcher__native {
+		font-size: 0.86rem;
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	.site-header .lang-switcher__region,
+	.site-panel .lang-switcher__region {
+		font-size: 0.68rem;
+		color: var(--ink-faint);
+		line-height: 1.2;
 	}
 
 	.site-panel .lang-switcher {
@@ -182,9 +231,10 @@ const links = [
 	}
 
 	.site-brand {
-		display: none;
+		display: block;
 		min-width: 0;
-		flex: 1 1 auto;
+		flex: 0 1 auto;
+		max-width: 12rem;
 		margin-right: 0.5rem;
 		font-family: var(--font-display);
 		font-size: 0.95rem;
