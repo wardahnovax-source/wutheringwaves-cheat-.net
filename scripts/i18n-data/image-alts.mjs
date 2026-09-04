@@ -1,0 +1,42 @@
+/** Descriptive image alts — Google rejects empty or keyword-only alts. */
+export const DESCRIPTIVE_IMAGE_ALTS = {
+	hero: 'Wuthering Waves Cheat hero — ESP and aimbot overlay in Wuthering Waves',
+	espWallhack: 'Wallhack outlines showing enemies and Scavs through walls',
+	aimbotCombat: 'Soft aim assist overlay during an Wuthering Waves raid',
+	squadFight: 'Wuthering Waves Cheat combat overlay during a squad fight',
+	playerEsp: 'Player ESP boxes and distance readouts in a Wuthering Waves raid',
+	headerArt: 'Aimbot view and bone priority controls for Wuthering Waves',
+	cheatsPackage: '2D radar threat overlay for Wuthering Waves',
+	rebootFight: 'Aimbot assist during a Wuthering Waves firefight',
+	battleRoyale: 'Wuthering Waves Cheat in-raid overview for Windows PC',
+	battleRoyaleIsland: 'ESP markers for loot and extracts in Wuthering Waves',
+};
+
+/** Page-level image alt by pageId (EN source of truth). */
+export const PAGE_IMAGE_ALTS = {
+	home: 'Wuthering Waves Cheat homepage hero — ESP and aimbot for Wuthering Waves',
+	'wuthering-waves-esp': 'Wuthering Waves ESP player boxes and distance readouts in a raid',
+	'wuthering-waves-aimbot': 'Wuthering Waves aimbot and soft aim controls on Windows PC',
+	features: 'Wuthering Waves Cheat features — ESP, soft aim, and radar screenshots',
+	pricing: 'Wuthering Waves Cheat store plans for monthly and lifetime licenses',
+	setup: 'Wuthering Waves Cheat setup guide screenshot for Windows PC',
+	updates: 'Wuthering Waves Cheat live status after game patches and game patches',
+	faq: 'Wuthering Waves Cheat FAQ — delivery, setup, and update answers',
+	support: 'Wuthering Waves Cheat support page for license and setup help',
+	undetected: 'Wuthering Waves Cheat undetected status overview for Windows PC',
+	wallhack: 'Wuthering Waves wallhack visibility through walls in a raid',
+	radar: 'Wuthering Waves 2D radar overlay showing nearby threats',
+	'anti-cheat': 'Wuthering Waves Cheat maintenance after a game patch',
+	'cheats-2026': 'Wuthering Waves Cheat product overview for Wuthering Waves',
+	hacks: 'Wuthering Waves Cheat product page — ESP, aimbot, and radar',
+	'cheat-download': 'Wuthering Waves Cheat download and install delivery flow',
+	'mod-menu': 'Wuthering Waves Cheat in-game menu controls',
+	'soft-aim': 'Wuthering Waves soft aim FOV and smoothness settings',
+	'best-cheats': 'Wuthering Waves Cheat overview for Wuthering Waves on PC',
+	'aimbot-hack': 'Wuthering Waves aimbot hack controls and bone priority',
+	'esp-hack': 'Wuthering Waves ESP hack boxes and loot markers',
+	'unlock-all': 'Wuthering Waves Cheat license features overview',
+	privacy: 'Wuthering Waves Cheat privacy policy page',
+	refund: 'Wuthering Waves Cheat refund policy page',
+	terms: 'Wuthering Waves Cheat terms of use page',
+};
